@@ -15,7 +15,7 @@ import os
 import re
 
 import streamlit as st
-from docx import docx
+from docx import Doument
 from google import genai
 from google.genai import types
 from pypdf import PdfReader
