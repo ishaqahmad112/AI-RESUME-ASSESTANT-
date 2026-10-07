@@ -73,7 +73,7 @@ def extract_text_from_pdf(data: bytes) -> str:
 
 
 def extract_text_from_docx(data: bytes) -> str:
-    doc = Document(io.BytesIO(data))
+    doc = docx.Document(io.BytesIO(data))
     parts = [p.text for p in doc.paragraphs if p.text.strip()]
     for table in doc.tables:
         for row in table.rows:
